@@ -1,7 +1,6 @@
 import express from 'express';
 import Contact from '../models/Contact.js';
-import nodemailer from 'nodemailer';
-import mailgunTransport from 'nodemailer-mailgun-transport';
+import { Resend } from 'resend';
 
 const router = express.Router();
 
@@ -29,18 +28,13 @@ router.post('/', async (req, res) => {
 
     await contact.save();
 
-    // Optional: Send email notification via Mailgun
-    if (process.env.MAILGUN_API_KEY && process.env.MAILGUN_DOMAIN) {
+    // Optional: Send email notification via Resend (FREE - 100 emails/day)
+    if (process.env.RESEND_API_KEY) {
       try {
-        const transporter = nodemailer.createTransport(mailgunTransport({
-          auth: {
-            api_key: process.env.MAILGUN_API_KEY,
-            domain: process.env.MAILGUN_DOMAIN
-          }
-        }));
+        const resend = new Resend(process.env.RESEND_API_KEY);
 
-        await transporter.sendMail({
-          from: `Portfolio Contact <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+        await resend.emails.send({
+          from: 'Portfolio Contact <onboarding@resend.dev>',
           to: process.env.EMAIL_USER,
           subject: `New Portfolio Contact: ${name}`,
           html: `
@@ -53,7 +47,7 @@ router.post('/', async (req, res) => {
             <p>${message}</p>
           `
         });
-        console.log('Email sent successfully via Mailgun');
+        console.log('Email sent successfully via Resend');
       } catch (emailError) {
         console.log('Email notification failed (saved to DB):', emailError.message);
       }
