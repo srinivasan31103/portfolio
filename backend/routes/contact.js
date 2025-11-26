@@ -1,6 +1,7 @@
 import express from 'express';
 import Contact from '../models/Contact.js';
 import nodemailer from 'nodemailer';
+import mailgunTransport from 'nodemailer-mailgun-transport';
 
 const router = express.Router();
 
@@ -28,19 +29,18 @@ router.post('/', async (req, res) => {
 
     await contact.save();
 
-    // Optional: Send email notification (skip if SMTP fails)
-    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+    // Optional: Send email notification via Mailgun
+    if (process.env.MAILGUN_API_KEY && process.env.MAILGUN_DOMAIN) {
       try {
-        const transporter = nodemailer.createTransport({
-          service: 'gmail',
+        const transporter = nodemailer.createTransport(mailgunTransport({
           auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
+            api_key: process.env.MAILGUN_API_KEY,
+            domain: process.env.MAILGUN_DOMAIN
           }
-        });
+        }));
 
         await transporter.sendMail({
-          from: process.env.EMAIL_USER,
+          from: `Portfolio Contact <postmaster@${process.env.MAILGUN_DOMAIN}>`,
           to: process.env.EMAIL_USER,
           subject: `New Portfolio Contact: ${name}`,
           html: `
@@ -53,6 +53,7 @@ router.post('/', async (req, res) => {
             <p>${message}</p>
           `
         });
+        console.log('Email sent successfully via Mailgun');
       } catch (emailError) {
         console.log('Email notification failed (saved to DB):', emailError.message);
       }
