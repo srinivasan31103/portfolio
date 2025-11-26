@@ -2,23 +2,99 @@
 node_modules/
 frontend/node_modules/
 backend/node_modules/
+jspm_packages/
+bower_components/
+web_modules/
 
 # Environment variables
 .env
+.env.*
+!.env.example
 backend/.env
 
 # Build outputs
 frontend/dist/
 build/
+dist/
+build/Release
 
 # IDE
 .vscode/
 .idea/
+.vscode-test
 
 # Logs
+logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage
+*.lcov
+.nyc_output
+lib-cov
+
+# Cache
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+.npm
+
+# Optional files
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# Framework specific
+.next
+out
+.nuxt
+.cache/
+.vuepress/dist
+.temp
+.svelte-kit/
+**/.vitepress/dist
+**/.vitepress/cache
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.firebase/
+.tern-port
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Yarn v3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Grunt
+.grunt
+
+# node-waf
+.lock-wscript
