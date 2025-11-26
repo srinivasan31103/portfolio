@@ -28,30 +28,34 @@ router.post('/', async (req, res) => {
 
     await contact.save();
 
-    // Optional: Send email notification
+    // Optional: Send email notification (skip if SMTP fails)
     if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS
-        }
-      });
+      try {
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+          }
+        });
 
-      await transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER,
-        subject: `New Portfolio Contact: ${name}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-          <p><strong>Location:</strong> ${location || 'Not provided'}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message}</p>
-        `
-      });
+        await transporter.sendMail({
+          from: process.env.EMAIL_USER,
+          to: process.env.EMAIL_USER,
+          subject: `New Portfolio Contact: ${name}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+            <p><strong>Location:</strong> ${location || 'Not provided'}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message}</p>
+          `
+        });
+      } catch (emailError) {
+        console.log('Email notification failed (saved to DB):', emailError.message);
+      }
     }
 
     res.status(201).json({
