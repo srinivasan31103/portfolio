@@ -23,9 +23,18 @@ const projects = [
     liveUrl: 'https://smart-hr-snowy.vercel.app/login',
     githubUrl: 'https://github.com/srinivasan31103/Smart-HR.git',
   },
+  {
+    title: 'Doctor Appointment',
+    category: 'Healthcare',
+    description: 'A doctor appointment booking system for scheduling consultations and managing patient records.',
+    image: '/projects/doctor-appointment.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://doctor-appointment-tau-dusky.vercel.app/login',
+    githubUrl: 'https://github.com/srinivasan31103/doctor-appointment.git',
+  },
 ]
 
-const categories = ['All', 'Web Development']
+const categories = ['All', 'Web Development', 'Healthcare']
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
