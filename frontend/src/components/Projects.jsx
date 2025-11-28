@@ -14,6 +14,15 @@ const projects = [
     liveUrl: 'https://studdent-progress-tracker.vercel.app/login',
     githubUrl: 'https://github.com/srinivasan31103/studdent-progress-tracker.git',
   },
+  {
+    title: 'Smart HR',
+    category: 'Web Development',
+    description: 'An intelligent HR management system for employee tracking, attendance, and workforce analytics.',
+    image: '/projects/smart-hr.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://smart-hr-snowy.vercel.app/login',
+    githubUrl: 'https://github.com/srinivasan31103/Smart-HR.git',
+  },
 ]
 
 const categories = ['All', 'Web Development']
