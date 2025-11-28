@@ -6,62 +6,17 @@ import './Projects.css'
 
 const projects = [
   {
-    title: 'GYM Website',
+    title: 'Student Progress Tracker',
     category: 'Web Development',
-    description: 'A modern fitness website with membership plans, workout schedules, and trainer profiles.',
-    image: '/projects/gym.jpg',
-    tags: ['HTML5', 'CSS3', 'JavaScript'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'Grocery Store',
-    category: 'E-Commerce',
-    description: 'Full-featured online grocery shopping platform with cart and checkout functionality.',
-    image: '/projects/grocery.jpg',
+    description: 'A comprehensive student progress tracking application to monitor academic performance and learning milestones.',
+    image: '/projects/student-tracker.jpg',
     tags: ['React', 'Node.js', 'MongoDB'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'Medicine Portal',
-    category: 'Healthcare',
-    description: 'Online medicine ordering system with prescription uploads and delivery tracking.',
-    image: '/projects/medicine.jpg',
-    tags: ['React', 'Express', 'MySQL'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'Gadgets Store',
-    category: 'E-Commerce',
-    description: 'Tech gadgets e-commerce platform with product comparisons and reviews.',
-    image: '/projects/gadgets.jpg',
-    tags: ['React', 'Redux', 'Firebase'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'Clothes Fashion',
-    category: 'E-Commerce',
-    description: 'Fashion e-commerce site with size guides, wishlist, and virtual try-on features.',
-    image: '/projects/clothes.jpg',
-    tags: ['Next.js', 'Tailwind', 'Stripe'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'Meesho Clone',
-    category: 'E-Commerce',
-    description: 'Meesho-inspired social commerce platform for resellers and small businesses.',
-    image: '/projects/meesho.jpg',
-    tags: ['MERN Stack', 'AWS', 'Redis'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://studdent-progress-tracker.vercel.app/login',
+    githubUrl: 'https://github.com/srinivasan31103/studdent-progress-tracker.git',
   },
 ]
 
-const categories = ['All', 'Web Development', 'E-Commerce', 'Healthcare']
+const categories = ['All', 'Web Development']
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
