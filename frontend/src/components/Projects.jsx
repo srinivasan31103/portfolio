@@ -32,6 +32,15 @@ const projects = [
     liveUrl: 'https://doctor-appointment-tau-dusky.vercel.app/login',
     githubUrl: 'https://github.com/srinivasan31103/doctor-appointment.git',
   },
+  {
+    title: 'Smart Village',
+    category: 'Web Development',
+    description: 'A digital platform for village management with services, announcements, and community engagement features.',
+    image: '/projects/smart-village.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://smartvillage-phi.vercel.app/login',
+    githubUrl: 'https://github.com/srinivasan31103/Smart-village.git',
+  },
 ]
 
 const categories = ['All', 'Web Development', 'Healthcare']
