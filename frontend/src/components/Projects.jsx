@@ -47,7 +47,7 @@ const projects = [
     description: 'A digital platform for village management with services, announcements, and community engagement features.',
     image: '/projects/smart-village.jpg',
     tags: ['React', 'Node.js', 'MongoDB'],
-    liveUrl: 'https://smartvillage-phi.vercel.app/login',
+    liveUrl: 'https://smartvillage-phi.vercel.app',
     githubUrl: 'https://github.com/srinivasan31103/Smart-village.git',
   },
   {
