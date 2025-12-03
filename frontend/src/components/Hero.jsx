@@ -130,13 +130,9 @@ export default function Hero() {
           variants={itemVariants}
         >
           <div className="hero-image-container">
-            <div className="image-glow" />
-            <div className="image-ring ring-1" />
-            <div className="image-ring ring-2" />
-            <div className="image-ring ring-3" />
             <img
-              src="/"
-              alt=""
+              src="/srinivasan.png"
+              alt="Srinivasan"
               className="hero-image"
             />
             {/* Floating Tech Icons */}
