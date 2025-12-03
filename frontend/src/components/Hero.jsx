@@ -90,7 +90,11 @@ export default function Hero() {
           </motion.p>
 
           <motion.div className="hero-cta" variants={itemVariants}>
-            <a href="#contact" className="btn btn-primary">
+            <a
+              href="/Srinivasan_Resume.pdf"
+              download="Srinivasan_Resume.pdf"
+              className="btn btn-primary"
+            >
               <FaDownload />
               Download CV
             </a>
