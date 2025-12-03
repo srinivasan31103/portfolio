@@ -24,6 +24,15 @@ const projects = [
     githubUrl: 'https://github.com/srinivasan31103/Export-management-system.git',
   },
   {
+    title: 'Doctor Appointment',
+    category: 'Healthcare',
+    description: 'A doctor appointment booking system for scheduling consultations and managing patient records.',
+    image: '/projects/doctor-appointment.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://doctor-appointment-tau-dusky.vercel.app/login',
+    githubUrl: 'https://github.com/srinivasan31103/doctor-appointment.git',
+  },
+  {
     title: 'Smart HR',
     category: 'Web Development',
     description: 'An intelligent HR management system for employee tracking, attendance, and workforce analytics.',
@@ -49,15 +58,6 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB'],
     liveUrl: 'https://smartvillage-phi.vercel.app',
     githubUrl: 'https://github.com/srinivasan31103/Smart-village.git',
-  },
-  {
-    title: 'Doctor Appointment',
-    category: 'Healthcare',
-    description: 'A doctor appointment booking system for scheduling consultations and managing patient records.',
-    image: '/projects/doctor-appointment.jpg',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    liveUrl: 'https://doctor-appointment-tau-dusky.vercel.app/login',
-    githubUrl: 'https://github.com/srinivasan31103/doctor-appointment.git',
   },
   {
     title: 'Student Progress Tracker',
