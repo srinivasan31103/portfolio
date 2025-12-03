@@ -59,6 +59,15 @@ const projects = [
     liveUrl: 'https://cargo-rapido.vercel.app/home',
     githubUrl: 'https://github.com/srinivasan31103/cargo-rapido.git',
   },
+  {
+    title: 'Export Management System',
+    category: 'Logistics',
+    description: 'A comprehensive export management system for handling international trade documentation and shipment tracking.',
+    image: '/projects/export-management.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://exportmanagementsystem.vercel.app',
+    githubUrl: 'https://github.com/srinivasan31103/Export-management-system.git',
+  },
 ]
 
 const categories = ['All', 'Web Development', 'Healthcare', 'Entertainment', 'Logistics']
