@@ -41,9 +41,18 @@ const projects = [
     liveUrl: 'https://smartvillage-phi.vercel.app/login',
     githubUrl: 'https://github.com/srinivasan31103/Smart-village.git',
   },
+  {
+    title: 'OTT Platform',
+    category: 'Entertainment',
+    description: 'A streaming platform for movies and shows with user authentication and content management.',
+    image: '/projects/ott-platform.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://ott-rosy.vercel.app/',
+    githubUrl: 'https://github.com/srinivasan31103/OTT-platform.git',
+  },
 ]
 
-const categories = ['All', 'Web Development', 'Healthcare']
+const categories = ['All', 'Web Development', 'Healthcare', 'Entertainment']
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
