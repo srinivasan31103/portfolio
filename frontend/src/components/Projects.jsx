@@ -50,9 +50,18 @@ const projects = [
     liveUrl: 'https://ott-rosy.vercel.app/',
     githubUrl: 'https://github.com/srinivasan31103/OTT-platform.git',
   },
+  {
+    title: 'Cargo Rapido',
+    category: 'Logistics',
+    description: 'A cargo and logistics management platform for tracking shipments and delivery operations.',
+    image: '/projects/cargo-rapido.jpg',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://cargo-rapido.vercel.app/home',
+    githubUrl: 'https://github.com/srinivasan31103/cargo-rapido.git',
+  },
 ]
 
-const categories = ['All', 'Web Development', 'Healthcare', 'Entertainment']
+const categories = ['All', 'Web Development', 'Healthcare', 'Entertainment', 'Logistics']
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
