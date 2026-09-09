@@ -91,8 +91,10 @@ export default function Hero() {
 
           <motion.div className="hero-cta" variants={itemVariants}>
             <a
-              href="/Srinivasan_Resume.pdf"
-              download="Srinivasan_Resume.pdf"
+              href="/Srinivasan_Web_Resume.pdf"
+              download="Srinivasan_Web_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary"
             >
               <FaDownload />
